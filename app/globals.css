@@ -29,6 +29,7 @@
   --shadow-black: 4px 4px 0 #000;
   --shadow-white: 4px 4px 0 #fff;
 
+  --grid-template-columns-auto: repeat(auto-fill, minmax(200px, 1fr));
 }
 
 @media (prefers-color-scheme: light) {
