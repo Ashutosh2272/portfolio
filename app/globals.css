@@ -1,16 +1,34 @@
 @import "tailwindcss";
 
-@theme {
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
   --color-lightHover: #fcf4ff;
   --color-darkHover: #3a004a;
   --color-accent: #22D3EE;
   --color-darkTheme: #11001f;
 }
 
-:root {
-  --font-outfit-fallback: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  --font-ovo-fallback: ui-serif, Georgia, "Times New Roman", Times, serif;
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-ovo: var(--font-ovo);
+  --font-outfit: var(--font-outfit);
+  --font-roboto: var(--font-roboto);
 }
-*{
-  font-family: Outfit;
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
 }
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Outfit, Ovo, Arial, Helvetica, sans-serif, Roboto, Oxygen, Ubuntu,;
+}
+
