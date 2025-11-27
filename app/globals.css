@@ -1,6 +1,4 @@
 @import "tailwindcss";
-
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -10,6 +8,8 @@
   --accent: #22D3EE;
   --darkTheme: #11001f;
 }
+
+
 
 @theme inline {
 
@@ -32,12 +32,13 @@
   --grid-template-columns-auto: repeat(auto-fill, minmax(200px, 1fr));
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
+
 
 body {
   background: var(--background);
