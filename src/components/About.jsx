@@ -4,8 +4,7 @@ import { assets, toolsData } from "../assets/assets";
 import { infoList } from "../assets/assets";
 import { motion } from "motion/react";
 
-
-const About = () => {
+const About = ({isDarkMode}) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -74,11 +73,19 @@ const About = () => {
               <motion.li
                 whileHover={{ scale: 1.05 }}
                 key={index}
-                className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black"
+                className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50"
               >
-                <Image src={icon} alt={title} className="w-7 mt-3 " />
-                <h3 className="my-4 font-semibold text-gray-700">{title}</h3>
-                <p className="text-gray-600 text-sm">{description}</p>
+                <Image
+                  src={isDarkMode ? iconDark : icon}
+                  alt={title}
+                  className="w-7 mt-3 "
+                />
+                <h3 className="my-4 font-semibold text-gray-700 dark:text-white">
+                  {title}
+                </h3>
+                <p className="text-gray-600 text-sm dark:text-white/80">
+                  {description}
+                </p>
               </motion.li>
             ))}
           </motion.ul>
@@ -87,7 +94,7 @@ const About = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.3, delay: 0.5 }}
-            className="my-6 text-gray-700 font-ovo "
+            className="my-6 text-gray-700 font-ovo dark:text-white/80"
           >
             Tools I use
           </motion.h4>

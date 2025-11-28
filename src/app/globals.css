@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -32,23 +35,19 @@
   --grid-template-columns-auto: repeat(auto-fill, minmax(200px, 1fr));
 }
 
-/* @media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: light) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-} */
-
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Outfit, Ovo, Arial, Helvetica, sans-serif, Roboto, Oxygen, Ubuntu,;
 }
 
-.bg-footer {
+
+
+/* .bg-footer {
   background-image: url("/footer-bg-color.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 90% auto; /* <--- correct value with a space */
-}
+  background-size: 90% auto; /* <--- correct value with a space 
+  
+} */
