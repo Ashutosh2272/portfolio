@@ -1,4 +1,4 @@
-import { assets, serviceData } from "@/assets/assets";
+import { assets, serviceData } from "../assets/assets";
 import React from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
