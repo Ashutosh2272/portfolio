@@ -57,7 +57,7 @@ const About = ({isDarkMode}) => {
           className="flex-1"
         >
           <p className="mb-10 max-w-2xl font-ovo">
-            I am an frontend developer with over a decade of professional
+            I am fulstack developer with over a decade of professional
             expertise in the field. Throughout my career, I have had the
             privilege of collaborating with prestigious orgaizations,
             contributinge to their success and growth

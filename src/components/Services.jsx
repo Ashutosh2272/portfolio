@@ -36,7 +36,7 @@ const Services = ({isDarkMode}) => {
         transition={{ duration: 0.5, delay: 0.7 }}
         className="text-center max-w-2xl mx-auto mt-5 mb-12 font-ovo "
       >
-        I am a frontend developer
+        From UI to database, I develop complete end-to-end web applications using modern technologies and clean architecture.
       </motion.p>
 
       <motion.div
