@@ -35,7 +35,12 @@ import right_arrow from './right-arrow.png';
 import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
-
+import github from './github.svg'
+import facebook from './facebook.svg';
+import instagram from './instagram.svg';
+import linkedin from './linkedin.svg';
+import hackerrank from './hackerrank.svg';
+import github_dark from './github-dark.svg'
 export const assets = {
     user_image,
     code_icon,
@@ -73,7 +78,13 @@ export const assets = {
     right_arrow,
     send_icon,
     right_arrow_bold,
-    right_arrow_bold_dark
+    right_arrow_bold_dark,
+    github,
+    github_dark,
+    hackerrank,
+    linkedin,
+    instagram,
+    facebook
 };
 
 export const workData = [
@@ -115,3 +126,12 @@ export const infoList = [
 export const toolsData = [
     assets.vscode, assets.intellij_idea, assets.mongodb, assets.postman, assets.git
 ];
+
+
+export const socilMediaIcon = [
+    { icon: assets.github, iconDark: assets.github_dark, link: 'https://github.com/Ashutosh2272'},
+    { icon: assets.hackerrank, iconDark: assets.hackerrank, link: '' },
+    { icon: assets.linkedin, iconDark: assets.linkedin, link: 'https://www.linkedin.com/in/ashutoshmaurya21/' },
+    { icon: assets.instagram, iconDark: assets.instagram, link: 'https://www.linkedin.com/in/ashutoshmaurya21/' },
+    { icon: assets.facebook, iconDark: assets.facebook, link: 'https://www.facebook.com/ashumaurya21/' }
+]

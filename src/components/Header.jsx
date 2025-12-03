@@ -1,9 +1,9 @@
-import { assets } from "../assets/assets";
+import { assets, socilMediaIcon } from "../assets/assets";
 import React from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
 
-const Header = () => {
+const Header = ({ isDarkMode }) => {
   return (
     <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
       <motion.div
@@ -66,6 +66,27 @@ const Header = () => {
           My resume <Image src={assets.download_icon} alt="" className="w-4" />
         </motion.a>
       </div>
+      <motion.ul
+        initial={{ y: 30, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.7, delay: 1.4 }}
+        className="flex items-center gap-3 sm:gap-5 mt-4"
+      >
+        {socilMediaIcon.map(({ icon, iconDark, link }, index) => (
+          <motion.li
+            key={index}
+            className="flex items-center justify-center w-9 sm:w-10 aspect-square border border-gray-600 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 "
+          >
+            <a href={link} target="_blank">
+              <Image
+                src={isDarkMode ? iconDark : icon}
+                alt={`tool-${index}`}
+                className="w-6 sm:w-7"
+              />
+            </a>
+          </motion.li>
+        ))}
+      </motion.ul>
     </div>
   );
 };
